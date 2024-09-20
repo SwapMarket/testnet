@@ -35,6 +35,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      # Add a step to modify vite.config.js
+      - name: Update Vite config for GitHub Pages
+        run: |
+          sed -i "s|base: .*$|base: '/testnet/',|g" vite.config.js
       # specify testnet 
       - name: Copy config
         run: npm run testnet
