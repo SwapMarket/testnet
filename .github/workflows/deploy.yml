@@ -42,7 +42,7 @@ jobs:
       # Add base to index.mts
       - name: Update index.tsx
         run: |
-          sed -i 's|base="/"|base="/testnet/"|g' src/index.tsx
+          sed -i 's|base = "/";|base = "/testnet/";|g' src/index.tsx
       # specify testnet 
       - name: Copy config
         run: npm run testnet
