@@ -28,10 +28,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Main Repository
+      - name: Checkout 'test' branch of Main Repository
         uses: actions/checkout@v4
         with:
           repository: SwapMarket/swapmarket.github.io
+          ref: test
 
       - name: Set up Node
         uses: actions/setup-node@v4
