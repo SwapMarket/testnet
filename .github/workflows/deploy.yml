@@ -45,11 +45,11 @@ jobs:
 
       - name: Update vite.config.mjs
         run: |
-          sed -i 's|base: "/",*$|base: "/testnet/",|g' vite.config.mjs
+          sed -i 's|base: "/",*$|base: "/testnet",|g' vite.config.mjs
 
       - name: Update index.tsx
         run: |
-          sed -i 's|base = "/";|base = "/testnet/";|g' src/index.tsx
+          sed -i 's|base = "/";|base = "/testnet";|g' src/index.tsx
 
       - name: Copy config
         run: npm run testnet
