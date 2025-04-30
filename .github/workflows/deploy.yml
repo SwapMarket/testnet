@@ -53,7 +53,7 @@ jobs:
 
       - name: Update base.ts
         run: |
-          sed -i 's|tetherUrl: "/usdt",|tetherUrl: "/usdt-testnet",|g' src/config/base.ts
+          sed -i 's|tetherUrl: "/usdt",|tetherUrl: "/usdt-testnet",|g' src/configs/base.ts
 
       - name: Copy config
         run: npm run testnet
