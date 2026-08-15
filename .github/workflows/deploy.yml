@@ -59,6 +59,8 @@ jobs:
         run: npm run testnet
 
       - name: Build
+        env:
+          VITE_RSK_LOG_SCAN_ENDPOINT: ""
         run: npm run build
 
       - name: Setup Pages
